@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>From</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- //CONTAINER -->
+    <main class="container">
+        <!-- TITTLE & SUBTITTLE -->
+        <div class="text-container">
+            <h1 class="tittle white">
+                Learn to code by
+                watching other
+            </h1>
+            <p class="text light">
+                See how experienced developer solve problems in real-time.
+                Watching scripted tutorials is great, but undestanding how
+                developers think is invaluable.
+            </p>
+        </div>
+        <!-- //FORM -->
+        <div class="form-container">
+            <!-- //TRIAL BUTTON -->
+            <div class="trial light">
+                <p>
+                    <span id="test" class="white">Try it free 7 days</span> then $20/mo. thereafter
+                </p>
+            </div>
+
+            <form id="form" action="">
+                <div class="name-container input-container">
+                    <input type="text" id="name" placeholder="First Name" class="input ">
+
+                    <span id="s-name" class="w-name-disable">Firts Name cannot be empty </span>
+                </div>
+
+                <div class="last-name-container input-container">
+                    <input type="text" id="last-name" placeholder="Last Name" class="input ">
+
+                    <span id="s-last-name" class="w-lastname-disable">Last Name cannot be empty</span>
+                </div>
+
+                <div class="email-container input-container">
+                    <input type="email" id="email" placeholder="Email Adress" class="input ">
+
+                    <span id="s-email" class="w-mail-disable">Looks like this is not an email</span>
+                </div>
+
+                <div class="pw-container input-container">
+
+                    <input type="password" id="password" placeholder="Password" class="input ">
+
+                    <span id="s-password" class="w-pw-disable">Password cannot be empty</span>
+
+                </div>
+
+
+                <div class="input-container">
+                    <input type="button" id="submit" class="submit white " value="Claim your free trial">
+
+                    </input>
+
+                    <p class="terms ">
+                        By clicking the button, you are agreeing to our<a href="#" class="terms-link">Terms and
+                            Services</a>
+                    </p>
+                </div>
+
+
+
+
+
+            </form>
+
+
+        </div>
+    </main>
+    <script src='main.js'></script>
+</body>
+
+</html>

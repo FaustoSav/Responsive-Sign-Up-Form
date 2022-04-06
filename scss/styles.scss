@@ -1,0 +1,361 @@
+//VARIBLES
+$grey-blue:hsl(240, 7%, 97%);
+$dark-blue:hsl(249, 10%, 26%);
+$green:hsl(154, 59%, 51%);
+$red:hsl(0, 100%, 74%);
+$blue: hsl(248, 32%, 49%);
+
+//NORMALIZES
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+figure,
+h1,
+p,
+ul {
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+    -webkit-margin-after: 0;
+    margin-block-end: 0;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
+    -webkit-margin-end: 0;
+    margin-inline-end: 0;
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+}
+
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+}
+
+body {
+    margin: 0;
+    background: no-repeat url(/assets/bg-intro-mobile.png);
+    background-color: $red;
+    background-size: cover;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+    min-width: 250px;
+}
+
+
+//MAIN CONTENT
+main {
+
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .white {
+        color: white;
+    }
+
+    .light {
+        color: $grey-blue;
+    }
+
+    //TITTLE AND SUBTITLE
+    .text-container {
+        margin: 10% 0;
+        padding-bottom: 50px;
+
+        h1 {
+            font-size: 1.2em;
+            margin: 0 15px;
+            margin-top: 25px;
+            letter-spacing: .5px;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: .8em;
+            line-height: 20px;
+            margin-top: 20px;
+            font-weight: 400;
+        }
+
+    }
+
+    //FORM AND BUTTONS
+
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        //BLUE BUTTON
+        .trial {
+            background-color: $blue;
+            width: 100%;
+            padding: 1.2em;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            font-size: .8em;
+            box-shadow: 0 6px rgba(0, 0, 0, 0.103);
+
+            p {
+                width: 60%;
+                margin: auto;
+            }
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+
+        //FORM en Blanco
+        form {
+
+            .input-container,
+            .terms,
+            .submit {
+                margin: 0 15px;
+
+            }
+
+            background-color: white;
+            border-radius: 10px;
+
+            .name-container {
+                padding-top: 15px;
+            }
+
+            .input-container {
+                margin-bottom: 15px;
+            }
+
+            .input {
+                height: 40px;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px solid rgba(128, 128, 128, 0.199);
+                font-family: 'Poppins', sans-serif;
+                color: $dark-blue;
+                font-weight: 600;
+                font-size: .7em;
+                padding-left: 5%;
+            }
+
+
+            //Texto de error debajo de los inputs
+            .w-name-disable,
+            .w-lastname-disable,
+            .w-mail-disable,
+            .w-pw-disable {
+
+                font-family: 'Poppins', sans-serif;
+                font-size: .6em;
+                color: $red;
+                display: flex;
+                flex-direction: row;
+                justify-content: right;
+                margin-top: 5px;
+                display: none;
+
+            }
+
+            //Icono de error en los inputs - se agrega la clase con js
+            .input-name-warning,
+            .input-lastname-warning,
+            .input-mail-warning,
+            .input-pw-warning {
+
+                background: no-repeat right url(/assets/icon-error.svg);
+                background-position: 95%;
+                border-color: $red;
+            }
+
+            //Boton Claim
+            .submit {
+                background-color: $green;
+
+                max-width: 450px;
+                margin: 0 20px;
+                border: none;
+                border-radius: 5px;
+                height: 40px;
+                text-transform: uppercase;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 500;
+                font-size: .7em;
+                padding: 0 10%;
+                box-shadow: 0 6px hsla(154, 93%, 30%, 0.753);
+                ;
+
+                &:hover {
+                    background-color: hsla(154, 59%, 51%, 0.651);
+                }
+
+                &:active {
+                    border: 1px solid black;
+                }
+            }
+
+
+
+            //Terminos y servicios
+            .terms {
+
+                font-size: .6em;
+                font-weight: 600;
+                color: rgba(128, 128, 128, 0.616);
+                margin: 15px 15px 20px 15px;
+
+                .terms-link {
+                    color: $red;
+                }
+            }
+
+
+        }
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 880px) {
+    body {
+        min-width: 640px;
+        background-size: contain;
+        background-repeat: repeat;
+        padding: 5%;
+    }
+
+    main {
+        flex-direction: row;
+
+        //Contenedor izquiero - titulo y parrafo
+        .text-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            //margin: 0;
+            padding: 10px;
+            margin-top: 10%;
+
+
+            h1 {
+                display: contents;
+
+                font-size: 3.5em;
+                margin: 0;
+                width: 100%;
+                text-align: start;
+                white-space: pre-line;
+                line-height: 60px;
+
+
+            }
+
+            p {
+                display: contents;
+
+                margin: 0;
+                white-space: pre-line;
+                font-size: 1em;
+                width: 100%;
+                line-height: 25px;
+                text-align: start;
+
+
+            }
+        }
+
+        //Contenedor del formulario - lado izquierdo
+        .form-container {
+            width: 100%;
+
+            max-width: 660px;
+
+            //Boton azul de trial
+            .trial {
+                height: 70px;
+                font-size: 1.2em;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 10px rgba(0, 0, 0, 0.103);
+                margin-bottom: 35px;
+
+                p {
+                    width: 100%;
+                }
+            }
+
+            form {
+
+                .w-name-disable,
+                .w-lastname-disable,
+                .w-mail-disable,
+                .w-pw-disable {
+                    font-size: .8em;
+                }
+
+                .input-container,
+                .terms,
+                .submit {
+                    margin: 25px 40px;
+
+                }
+
+                .input {
+                    padding: 35px;
+                    border-radius: 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.185);
+                    font-size: 90%;
+                    font-weight: 700;
+                }
+
+                .submit {
+                    display: block;
+                    width: 100%;
+                    max-width: none;
+
+                    // max-width: 500px;
+                    border-radius: 10px;
+                    height: 65px;
+                    text-align: center;
+                    font-size: 1em;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .terms {
+                    font-size: .8em;
+                }
+
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 1130px) {
+    .trial {
+        p {
+            font-size: .7em;
+        }
+    }
+
+    form {
+        .input {
+            font-size: 10px;
+
+        }
+    }
+}
