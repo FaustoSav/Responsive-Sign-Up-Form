@@ -1,4 +1,3 @@
 # Responsive-Sign-Up-Form
 Mentor Challenge
-
-Link: sign-up-form-nu-ten.vercel.app
+[DEMO](sign-up-form-nu-ten.vercel.app)
